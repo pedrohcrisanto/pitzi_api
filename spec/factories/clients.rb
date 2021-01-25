@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :client do
-    name { "MyString" }
-    cpf { "MyString" }
-    email { "MyString" }
+    name { Faker::Name.name  }
+    cpf { Faker::CPF.number }
+    email { Faker::Internet.email }
   end
 end
