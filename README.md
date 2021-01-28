@@ -12,7 +12,7 @@ $ cd /pitzi_api/
 $ bundle install
 ```
 
-Crie o banco, migre as tabelas e popule o banco de dados
+Crie o banco e migre as tabelas
 ```sh
 $ rails db:create db:migrate
 ```
@@ -29,8 +29,12 @@ Abra o seu navegador(de preferência Chrome ou Firefox) e navegue para `localhos
 ## Deploy Heroku
 
 Clientes
-
+```sh
 https://pitzi-api.herokuapp.com/clients
+```
 
 Assinaturas
+```sh
 https://pitzi-api.herokuapp.com/signatures
+```
+
