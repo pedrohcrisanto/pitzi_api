@@ -17,6 +17,12 @@ class SignaturesController < ApplicationController
   def create
     @signature = Signature.new(signature_params)
 
+    if params[:cpf].present?
+      client = Client.where(cpf: params[:cpf])
+      if client.present?
+        @signature.client_id = client.first.id
+      end
+    end
     if @signature.save
       render json: @signature, status: :created, location: @signature
     else
